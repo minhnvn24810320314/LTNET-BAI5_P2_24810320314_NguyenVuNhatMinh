@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="BaiTap5_3/BaiTap5_3.csproj" Id="4fa17fde-e84d-4432-90f9-7cdfac943146" />
+  <Project Path="BaiTap5_4/BaiTap5_4.csproj" Id="a10b30c8-4974-4fab-9eac-3b1f4281214e" />
+  <Project Path="BaiTap5_5/BaiTap5_5.csproj" />
+</Solution>

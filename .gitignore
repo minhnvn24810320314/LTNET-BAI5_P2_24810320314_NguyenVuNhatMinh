@@ -1,0 +1,38 @@
+## Visual Studio / C# Junk & Build Files
+.vs/
+bin/
+obj/
+*.user
+*.useros
+*.suo
+*.userprefs
+*.pidb
+*.booproj
+*.svclog
+*.sublime-project
+
+## Build Results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+build/
+
+## NuGet Packages
+*.nupkg
+packages/
+!.nuget/packages.config
+
+## SQL Server Express / LocalDB Data Files (Giữ lại script .sql, bỏ file DB tạm)
+*.mdf
+*.ldf
+
+## OS & Tool Junk
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
