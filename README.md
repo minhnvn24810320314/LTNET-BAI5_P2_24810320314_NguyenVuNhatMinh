@@ -23,74 +23,52 @@
 
 ### BÀI 5.3: HỆ THỐNG QUẢN LÝ QUÁN CAFE (POS CAFE SYSTEM)
 
-#### 1. Gọi món & Cập nhật trạng thái bàn (Visual Table Layout)
-Hiển thị danh sách bàn động dạng sơ đồ. Bàn "Trống" hiển thị màu xanh, khi gọi món tự động chuyển sang màu đỏ ("Có khách") và nạp danh sách món vào DataGridView.
+#### 1. Màn hình sơ đồ bàn ban đầu
+![Giao diện sơ đồ bàn](docs/bai5_3_01_giao_dien_so_do_ban.png)
 
-![Gọi món và Đổi trạng thái bàn](docs/bai5_3_01_goi_mon_va_doi_trang_thai.png)
+#### 2. Gọi món & Cập nhật trạng thái bàn
+![Gọi món và đổi trạng thái](docs/bai5_3_02_goi_mon_va_doi_trang_thai.png)
 
-#### 2. Thao tác Đổi bàn (Exchange Table)
-Chuyển toàn bộ món ăn từ bàn hiện tại sang bàn mới. Bàn cũ quay về trạng thái màu xanh ("Trống"), bàn mới nhận hóa đơn chuyển sang màu đỏ ("Có khách").
+#### 3. Thanh toán hóa đơn
+![Thanh toán hóa đơn](docs/bai5_3_03_thanh_toan_hoa_don.png)
 
-![Thao tác Đổi bàn](docs/bai5_3_02_thao_tac_doi_ban.png)
-
-#### 3. Thực thi Nghiệp vụ Thanh toán (SqlTransaction)
-Sử dụng `SqlTransaction` để đồng bộ xử lý: tính tổng tiền hóa đơn, cập nhật giờ ra/trạng thái hóa đơn thành công và giải phóng bàn về trạng thái "Trống".
-
-![Thanh toán Hóa đơn Cafe](docs/bai5_3_03_thanh_toan_hoa_don.png)
-
-#### 4. Minh họa Bắt lỗi Validation
-Bắt lỗi Validation nghiệp vụ khi chưa chọn bàn hoặc nhập số lượng/đơn giá không hợp lệ.
-
-![Bắt lỗi Validation Bài 5.3](docs/bai5_3_04_quan_ly_thuc_don_validation.png)
+#### 4. Bắt lỗi Validation
+![Quản lý thực đơn validation](docs/bai5_3_04_quan_ly_thuc_don_validation.png)
 
 ---
 
 ### BÀI 5.4: HỆ THỐNG QUẢN LÝ KHÁCH SẠN (HOTEL MANAGEMENT SYSTEM)
 
-#### 1. Màn hình Chính & Quản lý danh sách Phòng (Check-in)
-Hiển thị danh sách phòng, hỗ trợ tìm kiếm/lọc phòng trống và thực hiện thủ tục Check-in cho khách hàng.
+#### 1. Màn hình giao diện chính
+![Giao diện chính khách sạn](docs/bai5_4_01_giao_dien_chinh.png)
 
-![Check-in Khách sạn](docs/bai5_4_01_checkin_phong.png)
+#### 2. Lọc phòng & Xử lý ngắt kết nối
+![Lọc phòng ngắt kết nối](docs/bai5_4_02_loc_phong_ngat_ket_noi.png)
 
-#### 2. Quản lý Dịch vụ & Đặt món/Sử dụng dịch vụ
-Thêm dịch vụ (nước uống, giặt ủi...) vào phòng đang có khách ở, tự động tính tổng tiền dịch vụ theo từng phòng.
+#### 3. Check-in phòng thành công
+![Check-in thành công](docs/bai5_4_03_check_in_thanh_cong.png)
 
-![Sử dụng Dịch vụ Khách sạn](docs/bai5_4_02_su_dung_dich_vu.png)
+#### 4. Check-out và xuất hóa đơn
+![Check-out hóa đơn](docs/bai5_4_04_check_out_hoa_don.png)
 
-#### 3. Thanh toán Check-out (SqlTransaction)
-Xử lý giao dịch Check-out bọc trong `SqlTransaction`: tính tiền phòng theo thời gian lưu trú + tiền dịch vụ, cập nhật trạng thái phòng về "Trống".
-
-![Thanh toán Check-out](docs/bai5_4_03_checkout_thanh_toan.png)
-
-#### 4. Báo lỗi Giao dịch & Validation
-Thông báo lỗi khi phòng chưa có khách Check-in hoặc nhập sai dữ liệu khách hàng/dịch vụ.
-
-![Báo lỗi Validation Khách sạn](docs/bai5_4_04_validation_loi.png)
+#### 5. Trạng thái phòng sau Check-out
+![Trạng thái sau Check-out](docs/bai5_4_05_trang_thai_sau_check_out.png)
 
 ---
 
 ### BÀI 5.5: HỆ THỐNG QUẢN LÝ KHO / BÁN HÀNG (INVENTORY MANAGEMENT SYSTEM)
 
-#### 1. Giao diện Quản lý Danh mục & Sản phẩm (CRUD 3-Tier)
-Giao diện quản lý danh sách hàng hóa/sản phẩm với đầy đủ chức năng Thêm, Sửa, Xóa và Tìm kiếm sản phẩm theo mã/tên.
+#### 1. Màn hình giao diện chính
+![Giao diện chính quản lý kho](docs/bai5_5_01_giao_dien_chinh.png)
 
-![Quản lý Sản phẩm](docs/bai5_5_01_quan_ly_san_pham.png)
+#### 2. Tìm kiếm sử dụng SqlParameter
+![Tìm kiếm SqlParameter](docs/bai5_5_02_tim_kiem_sqlparameter.png)
 
-#### 2. Lập Phiếu Nhập / Phiếu Xuất kho
-Màn hình thực thi nghiệp vụ lập hóa đơn/phiếu xuất nhập kho, cập nhật số lượng tồn kho tự động trong CSDL.
+#### 3. Lập phiếu xuất/nhập thành công
+![Lập phiếu thành công](docs/bai5_5_03_lap_phieu_thanh_cong.png)
 
-![Lập Phiếu Xuất Nhập Kho](docs/bai5_5_02_lap_phieu_xuat_nhap.png)
+#### 4. Thống kê tổng giá trị tồn kho
+![Tổng giá trị tồn](docs/bai5_5_04_tong_gia_tri_ton.png)
 
-#### 3. Báo cáo - Thống kê Doanh thu / Tồn kho
-Màn hình xuất báo cáo thống kê số lượng tồn kho và tổng doanh thu bán hàng theo khoảng thời gian.
-
-![Báo cáo Thống kê Kho](docs/bai5_5_03_bao_cao_thong_ke.png)
-
-#### 4. Bắt lỗi SQL Injection & Ràng buộc Dữ liệu
-Sử dụng `SqlParameter` chống SQL Injection và kiểm tra ràng buộc không cho nhập số lượng tồn âm hoặc giá tiền nhỏ hơn 0.
-
-![Xử lý lỗi SQL Injection và Validation](docs/bai5_5_04_sql_injection_validation.png)
-#### 4. Bắt lỗi SQL Injection & Ràng buộc Dữ liệu
-Sử dụng `SqlParameter` chống SQL Injection và kiểm tra ràng buộc không cho nhập số lượng tồn âm hoặc giá tiền nhỏ hơn 0.
-
-![Xử lý lỗi SQL Injection và Validation](images/bai5_5_04_sql_injection_validation.png)
+#### 5. Cảnh báo lỗi & Rollback
+![Cảnh báo Rollback](docs/bai5_5_05_canh_bao_rollback.png)
